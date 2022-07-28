@@ -34,10 +34,10 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.dsPrueba = new PRUEBA.dsPrueba();
             this.dsPruebaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoDocumentoTableAdapter = new PRUEBA.dsPruebaTableAdapters.TipoDocumentoTableAdapter();
-            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrueba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPruebaBindingSource)).BeginInit();
@@ -87,11 +87,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 46);
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 13);
+            this.label1.Size = new System.Drawing.Size(327, 51);
             this.label1.TabIndex = 4;
             this.label1.Text = "TIPO DE DOCUMENTO";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(350, 144);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(89, 35);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dsPrueba
             // 
@@ -106,16 +118,6 @@
             // tipoDocumentoTableAdapter
             // 
             this.tipoDocumentoTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(350, 144);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 35);
-            this.btnEliminar.TabIndex = 6;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmTipoDocuento
             // 
