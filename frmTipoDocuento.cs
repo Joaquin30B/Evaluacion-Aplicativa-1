@@ -31,7 +31,6 @@ namespace PRUEBA
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            
             DialogResult respuesta = MessageBox.Show("¿Desea agregar nuevo registro?", "SISTEMA",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
@@ -44,7 +43,6 @@ namespace PRUEBA
             {
                 MessageBox.Show("Operacion cancelada", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -52,13 +50,23 @@ namespace PRUEBA
             int id = getId();
             if (id > 0)
             {
-                var frm = new frmTipoDocumentoEdit(id);
-                frm.ShowDialog();
-                cargarDatos();
+                DialogResult respuesta = MessageBox.Show("¿Realmente desea editar el registro " + id + "?", "SISTEMA",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (respuesta == DialogResult.Yes)
+                {
+                    var frm = new frmTipoDocumentoEdit(id);
+                    frm.ShowDialog();
+                    MessageBox.Show("Registro " + id + " fue editado", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarDatos();
+                }
+                else
+                {
+                    MessageBox.Show("Operacion cancelada", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Seleccione un Id válido", "SISTEMA",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un Id válido", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private int getId()
@@ -99,7 +107,7 @@ namespace PRUEBA
             }
             else
             {
-               MessageBox.Show("Debe seleccionar un Id válido", "SISTEMA",MessageBoxButtons.OK, MessageBoxIcon.Information);
+               MessageBox.Show("Debe seleccionar un Id válido", "SISTEMA",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

@@ -38,6 +38,7 @@
             this.dsPrueba = new PRUEBA.dsPrueba();
             this.dsPruebaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoDocumentoTableAdapter = new PRUEBA.dsPruebaTableAdapters.TipoDocumentoTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrueba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPruebaBindingSource)).BeginInit();
@@ -48,17 +49,19 @@
             this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDatos.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(15, 205);
+            this.dgvDatos.Location = new System.Drawing.Point(15, 183);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(423, 233);
+            this.dgvDatos.Size = new System.Drawing.Size(380, 211);
             this.dgvDatos.TabIndex = 0;
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(15, 109);
+            this.btnCargar.Font = new System.Drawing.Font("Myanmar Text", 8.25F);
+            this.btnCargar.Location = new System.Drawing.Point(12, 95);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(102, 35);
+            this.btnCargar.Size = new System.Drawing.Size(102, 32);
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "CARGAR DATOS";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -66,22 +69,28 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(160, 144);
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnNuevo.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(117, 134);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(89, 35);
+            this.btnNuevo.Size = new System.Drawing.Size(89, 32);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "NUEVO";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(255, 144);
+            this.btnEditar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnEditar.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(212, 134);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(89, 35);
+            this.btnEditar.Size = new System.Drawing.Size(89, 32);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label1
@@ -97,12 +106,15 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(350, 144);
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnEliminar.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(307, 134);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(89, 32);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dsPrueba
@@ -119,11 +131,24 @@
             // 
             this.tipoDocumentoTableAdapter.ClearBeforeFill = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 6.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(374, -3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "J.B";
+            // 
             // frmTipoDocuento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 450);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(404, 406);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEditar);
@@ -153,6 +178,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label2;
     }
 }
 

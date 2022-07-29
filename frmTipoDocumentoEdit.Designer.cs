@@ -33,6 +33,7 @@ namespace PRUEBA
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.chkEstado = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -71,11 +72,23 @@ namespace PRUEBA
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(328, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "J.B";
+            // 
             // frmTipoDocumentoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(353, 179);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.chkEstado);
             this.Controls.Add(this.txtNombre);
@@ -95,5 +108,6 @@ namespace PRUEBA
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.CheckBox chkEstado;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label2;
     }
 }
